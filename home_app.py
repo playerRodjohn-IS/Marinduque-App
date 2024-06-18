@@ -24,5 +24,5 @@ hide_pages(["Thank you"])
 
 st.markdown("### FINAL REQUIREMENTS PRESENTED BY:")
 st.header("Marinduque, Kyle of BSIS 3B")
-st.image("./profile.JPG")  # Adjust path if necessary
+st.image("profile.JPG")  # Adjust path if necessary
 st.markdown("""<a href="/photographer/thinkstock-83786">Thinkstock</a> on <a href="/">Freeimages.com</a>""", unsafe_allow_html=True)
