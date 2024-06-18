@@ -8,8 +8,10 @@ st.set_page_config(layout="wide", page_title="About Me")
 # Add a header with your full name
 st.title('Kyle Marinduque')
 
-# Display your picture
-profile_image_path = 'profile.JPG'  # Ensure this path is correct
+# Specify the path to your profile image
+profile_image_path = 'profile.JPG'  # Adjust this path as needed
+
+# Check if the file exists
 if os.path.exists(profile_image_path):
     profile_image = Image.open(profile_image_path)
     st.image(profile_image, width=600)
@@ -44,4 +46,4 @@ There's nothing quite like the feeling of getting out and exploring the world. W
 ''')
 
 # Footer
-st.write("by koalatech...")
+st.write("by koalatech...")  # Replace with your information
