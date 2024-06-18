@@ -1,5 +1,5 @@
 import streamlit as st
-from st_pages import Page, Section, show_pages, hide_pages
+from utils.st_pages import Page, Section, show_pages, hide_pages
 
 show_pages([
     Page("home_app.py", "ITEQMT Machine Learning Application Portfolio", "👨‍💻"),
