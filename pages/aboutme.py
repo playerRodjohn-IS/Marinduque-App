@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-import os
 
 # Profile Page
 st.set_page_config(layout="wide", page_title="About Me")
@@ -11,11 +10,11 @@ st.title('Kyle Marinduque')
 # Specify the path to your profile image
 profile_image_path = 'profile.JPG'  # Adjust this path as needed
 
-# Check if the file exists
-if os.path.exists(profile_image_path):
+# Load and display the image
+try:
     profile_image = Image.open(profile_image_path)
     st.image(profile_image, width=600)
-else:
+except FileNotFoundError:
     st.error(f"File not found: {profile_image_path}")
 
 # Add your personal information
