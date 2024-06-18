@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import os
 
 # Profile Page
 st.set_page_config(layout="wide", page_title="About Me")
@@ -7,14 +8,12 @@ st.set_page_config(layout="wide", page_title="About Me")
 # Add a header with your full name
 st.title('Kyle Marinduque')
 
-# Specify the path to your profile image
-profile_image_path = 'profile.JPG'  # Adjust this path as needed
-
-# Load and display the image
-try:
+# Display your picture
+profile_image_path = 'profile.JPG'  # Ensure this path is correct
+if os.path.exists(profile_image_path):
     profile_image = Image.open(profile_image_path)
     st.image(profile_image, width=600)
-except FileNotFoundError:
+else:
     st.error(f"File not found: {profile_image_path}")
 
 # Add your personal information
@@ -45,4 +44,4 @@ There's nothing quite like the feeling of getting out and exploring the world. W
 ''')
 
 # Footer
-st.write("by koalatech...")  # Replace with your information
+st.write("by koalatech...")
