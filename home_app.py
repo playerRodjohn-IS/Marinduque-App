@@ -1,7 +1,8 @@
 import streamlit as st
 from st_pages import Page, Section, show_pages, hide_pages
 
-show_pages([
+show_pages(
+    [
     Page("home_app.py", "ITEQMT Machine Learning Application Portfolio", "👨‍💻"),
     
     Section("Main Page", "📢"),
@@ -18,7 +19,8 @@ show_pages([
     Page("pages/sentiment_code.py", "Sentiment Analyzer SRC", "1️⃣", in_section=True),
     Page("pages/classifier_code.py", "Image Classification SRC", "2️⃣", in_section=True),
     Page("pages/prediction_code.py", "Prediction SRC", "3️⃣", in_section=True),
-])
+]
+)
 
 hide_pages(["Thank you"])
 
